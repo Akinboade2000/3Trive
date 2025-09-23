@@ -1187,33 +1187,41 @@ footer {
     text-align: center;
     padding-top: 1rem;
 }
+
 @media (max-width: 768px) {
+    .about-section
     .vision-section {
         padding: 3rem 0;
     }
     
+    .about-content,
     .vision-content {
         flex-direction: column;
     }
     
+    .about-section .section-title h2,
     .vision-section .section-title h2 {
         font-size: 2rem;
     }
     
+    .about-text h2,
     .vision-text h2 {
         font-size: 1.8rem;
     }
 }
 
 @media (max-width: 480px) {
+    .about-section .section-title h2,
     .vision-section .section-title h2 {
         font-size: 1.8rem;
     }
     
+    .about-text h2,
     .vision-text h2 {
         font-size: 1.6rem;
     }
     
+    .about-content
     .vision-content {
         gap: 2rem;
     }
