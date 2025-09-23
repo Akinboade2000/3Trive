@@ -1187,3 +1187,34 @@ footer {
     text-align: center;
     padding-top: 1rem;
 }
+@media (max-width: 768px) {
+    .vision-section {
+        padding: 3rem 0;
+    }
+    
+    .vision-content {
+        flex-direction: column;
+    }
+    
+    .vision-section .section-title h2 {
+        font-size: 2rem;
+    }
+    
+    .vision-text h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .vision-section .section-title h2 {
+        font-size: 1.8rem;
+    }
+    
+    .vision-text h2 {
+        font-size: 1.6rem;
+    }
+    
+    .vision-content {
+        gap: 2rem;
+    }
+}
