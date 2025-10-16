@@ -272,24 +272,45 @@ header {
     gap: 2rem;
 }
 
+/* Service Images Styles - FIXED */
+.service-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    display: block; /* Ensures proper rendering */
+}
+
+.service-card:hover .service-image img {
+    transform: scale(1.05);
+}
+
+/* Service card structure - FIXED */
 .service-card {
     background: #fff;
-    padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
-    transition: transform 0.3s;
+    transition: all 0.3s ease;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
-.service-card:hover {
-    transform: translateY(-10px);
-}
-
-.service-icon {
-    font-size: 3rem;
-    color: #0056b3;
-    margin-bottom: 1rem;
+.service-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .service-card h3 {
@@ -298,35 +319,20 @@ header {
     color: #0056b3;
 }
 
-/* Service Images Styles */
-.service-image {
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
-    border-radius: 10px 10px 0 0;
-    margin: -2rem -2rem 1.5rem -2rem;
-}
-
-.service-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-    padding-left: 0; /* Fixed the padding issue */
-    padding-top: 0; /* Fixed the padding issue */
-}
-
-.service-card:hover .service-image img {
-    transform: scale(1.05);
-}
-
-.service-content {
-    padding: 1.5rem;
-}
-
 .service-card p {
     color: #666;
     line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.service-icon {
+    font-size: 3rem;
+    color: #0056b3;
+    margin-bottom: 1rem;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
 }
 
 /* Management Section */
@@ -991,11 +997,10 @@ footer {
     
     .service-image {
         height: 140px;
-        margin: -1.5rem -1.5rem 1rem -1.5rem;
     }
     
     .service-card {
-        padding: 1rem;
+        padding: 0;
     }
     
     .service-card h3 {
